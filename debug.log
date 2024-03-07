@@ -12,3 +12,30 @@ Traceback (most recent call last):
     └ <telegram.ext._application.Application object at 0x7f448685a200>
 
 NameError: name 'button' is not defined
+2024-03-07T21:35:22.081379+0500 ERROR An error has been caught in function '<module>', process 'MainProcess' (35133), thread 'MainThread' (140135871270912):
+Traceback (most recent call last):
+
+> File "/home/yaaa/Documents/consultant_Data-Insight_01.2024/main.py", line 106, in <module>
+    main()
+    └ <function main at 0x7f73dd7f11b0>
+
+  File "/home/yaaa/Documents/consultant_Data-Insight_01.2024/main.py", line 87, in main
+    application = Application.builder().token(TOKEN).build()
+                  │           │               └ None
+                  │           └ <staticmethod(<function Application.builder at 0x7f73eb192b90>)>
+                  └ <class 'telegram.ext._application.Application'>
+
+  File "/home/yaaa/.local/lib/python3.10/site-packages/telegram/ext/_applicationbuilder.py", line 286, in build
+    bot: Bot = self._build_ext_bot()  # build a bot
+               │    └ <function ApplicationBuilder._build_ext_bot at 0x7f73eb0b6dd0>
+               └ <telegram.ext._applicationbuilder.ApplicationBuilder object at 0x7f73dd808040>
+  File "/home/yaaa/.local/lib/python3.10/site-packages/telegram/ext/_applicationbuilder.py", line 248, in _build_ext_bot
+    return ExtBot(
+           └ <class 'telegram.ext._extbot.ExtBot'>
+  File "/home/yaaa/.local/lib/python3.10/site-packages/telegram/ext/_extbot.py", line 213, in __init__
+    super().__init__(
+  File "/home/yaaa/.local/lib/python3.10/site-packages/telegram/_bot.py", line 239, in __init__
+    raise InvalidToken("You must pass the token you received from https://t.me/Botfather!")
+          └ <class 'telegram.error.InvalidToken'>
+
+telegram.error.InvalidToken: You must pass the token you received from https://t.me/Botfather!
