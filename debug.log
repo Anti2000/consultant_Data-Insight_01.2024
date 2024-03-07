@@ -1,0 +1,14 @@
+2024-02-25T16:20:53.956210+0500 ERROR An error has been caught in function '<module>', process 'MainProcess' (23770), thread 'MainThread' (139932534898688):
+Traceback (most recent call last):
+
+> File "/home/yaaa/Documents/consultant_Data-Insight_01.2024/main.py", line 111, in <module>
+    main()
+    └ <function main at 0x7f4485b3d5a0>
+
+  File "/home/yaaa/Documents/consultant_Data-Insight_01.2024/main.py", line 98, in main
+    application.add_handler(CallbackQueryHandler(button))
+    │           │           └ <class 'telegram.ext._callbackqueryhandler.CallbackQueryHandler'>
+    │           └ <function Application.add_handler at 0x7f44934d7400>
+    └ <telegram.ext._application.Application object at 0x7f448685a200>
+
+NameError: name 'button' is not defined
